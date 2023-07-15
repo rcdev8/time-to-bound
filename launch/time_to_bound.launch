@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<launch>  
+  <rosparam command="load" file="$(find time_to_bound)/config/time_to_bound.yaml" />
+
+  <remap from="/pre_teleop_twist_topic" to="/pre_teleop_twist"/>
+  <remap from="/external_wrench_topic" to="/franka_state_controller/F_ext"/>
+  <remap from="/joint_states_topic" to="/joint_states"/>
+  <remap from="/teleop_twist" to="/teleop_vel"/>
+
+  <node name="time_to_bound" pkg="time_to_bound" type="time_to_bound_node" output="screen"/>
+</launch>

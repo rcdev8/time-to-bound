@@ -1,0 +1,28 @@
+time_to_bound:
+    # task space position limits
+    # x_min: [0.1, -10, 0.1]
+    x_min: [0.1, -10, 0.05]
+    x_max: [10, 10, 10]
+    p_lb: 0.
+
+    # joint limits
+    q_min: [-2.8973, -1.7628, -2.8973, -3.0718, -2.8973, -0.0175, -2.8973]
+    q_max: [2.8973, 1.7628, 2.8973, -0.0698, 2.8973, 3.7525, 2.8973]
+    q_lb: 0.35
+
+    # minimum singular value limit
+    s_lb: 0.1 
+
+    # t2b min parameter
+    tau_lb: 2.0
+    
+    # admittance interface
+    admittance_active: true
+    admittance_overwrite: true
+    
+    admittance_force_thresh: 10.0
+    admittance_force2vel_factor: 0.05
+
+    admittance_torque_thresh: 10.0
+    admittance_torque2rot_factor: 0.05
+    
